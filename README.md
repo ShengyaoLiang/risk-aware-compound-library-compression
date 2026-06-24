@@ -109,7 +109,8 @@ manuscript/figures/
 - EGFR/CHEMBL203 replay is a same-source label-hidden operational sensitivity
   analysis, not independent external validation.
 - Random forest and Chemprop are sampled model sanity checks, not full Future
-  all-row, same-protocol benchmarks.
+  all-row, same-protocol benchmarks, and should not be used to claim
+  architectural superiority over graph neural networks.
 - A real unknown-activity external library can be ranked from SMILES alone, but
   enrichment and hit-rate effects require later historical-label reveal or
   prospective experimental readout.

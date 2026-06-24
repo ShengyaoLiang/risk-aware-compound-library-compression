@@ -5,7 +5,7 @@
   "files": [
     {
       "path": "README.md",
-      "bytes": 6389
+      "bytes": 6478
     },
     {
       "path": "LICENSE",
@@ -29,7 +29,7 @@
     },
     {
       "path": "manuscript/main.tex",
-      "bytes": 40727
+      "bytes": 41260
     },
     {
       "path": "manuscript/references.bib",
@@ -37,7 +37,7 @@
     },
     {
       "path": "manuscript/generated/results_tables.tex",
-      "bytes": 9814
+      "bytes": 9871
     },
     {
       "path": "manuscript/figures/workflow.pdf",
@@ -141,7 +141,7 @@
     },
     {
       "path": "scripts/build_manuscript_tables.py",
-      "bytes": 20647
+      "bytes": 20704
     },
     {
       "path": "scripts/build_multifold_training_summary.py",

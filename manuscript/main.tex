@@ -421,7 +421,11 @@ The previous so\_f4 model, random forest and Chemprop checks provide context,
 but only the current model and previous so\_f4 future comparison use the full
 future artifacts. The sampled random forest and Chemprop rows should therefore
 be interpreted as sampled model sanity checks rather than full Future
-all-row, same-protocol benchmarks.
+all-row, same-protocol benchmarks. I include them to make the baseline context
+visible, not to claim a definitive architecture ranking. A complete
+same-protocol Chemprop or graph-model benchmark would require full-dataset
+training and inference under the same split, preprocessing and budgeted
+ranking protocol, and is left outside the present reproducibility package.
 \ModelPerformanceTable
 \BaselineSanityTable
 
@@ -586,19 +590,21 @@ should be advanced, reviewed or deferred.
 
 \section{Limitations}
 This paper reports a decision framework built on a strong baseline model
-rather than a novel molecular representation. Only one full training fold is
-currently reported, and the bootstrap intervals do not include retraining
-variability. Multi-fold stability assessment is prepared in the
-reproducibility workflow, but I do not report a partial multi-fold estimate
-because incomplete folds would give a false sense of precision. Public
-retrospective data cannot establish project-specific hit-rate improvement or
-cost reduction. The EGFR replay is same-source and balanced, and must not be
-described as a prospective unknown-activity library. ADMET endpoints vary in
-temporal generalization; weak endpoints such as CYP induction should be
-treated only as low-confidence review prompts. Prospective or externally
-blinded experiments are still required for stronger deployment claims. These
-limitations are not side notes to the work; they define the level at which the
-evidence should be used.
+rather than a novel molecular representation. The random forest and Chemprop
+rows are sampled sanity checks, not full-dataset, same-protocol baselines; they
+should not be used to claim architectural superiority over graph neural
+networks. Only one full training fold is currently reported, and the bootstrap
+intervals do not include retraining variability. Multi-fold stability
+assessment is prepared in the reproducibility workflow, but I do not report a
+partial multi-fold estimate because incomplete folds would give a false sense
+of precision. Public retrospective data cannot establish project-specific
+hit-rate improvement or cost reduction. The EGFR replay is same-source and
+balanced, and must not be described as a prospective unknown-activity library.
+ADMET endpoints vary in temporal generalization; weak endpoints such as CYP
+induction should be treated only as low-confidence review prompts. Prospective
+or externally blinded experiments are still required for stronger deployment
+claims. These limitations are not side notes to the work; they define the
+level at which the evidence should be used.
 
 \section{Data and Code Availability}
 The primary activity records are derived from ChEMBL 36, and BACE is

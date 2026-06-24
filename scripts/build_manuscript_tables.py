@@ -126,7 +126,7 @@ def main() -> None:
         [
             r"\begin{table}[!htbp]",
             r"\centering",
-            r"\caption{Selected baseline sanity checks, not a full benchmark suite. Random forest and Chemprop use sampled ChEMBL 36 splits for context; the current model and previous so\_f4 comparison use the full future prediction artifacts.}",
+            r"\caption{Selected baseline sanity checks, not a full benchmark suite. Random forest and Chemprop use sampled ChEMBL 36 splits for context only; they are not full-dataset, same-protocol baselines. The current model and previous so\_f4 comparison use the full future prediction artifacts.}",
             r"\label{tab:baselines}",
             r"\begin{tabular}{llrrrr}",
             r"\toprule",
