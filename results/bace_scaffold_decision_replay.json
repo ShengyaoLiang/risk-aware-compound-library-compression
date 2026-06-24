@@ -1,0 +1,250 @@
+{
+  "dataset": "external_bace",
+  "seed": 2026,
+  "batch_size": 100,
+  "sample_batches": 1,
+  "sample_rows": 100,
+  "raw_order": {
+    "top_5": {
+      "hit_rate": 1.0,
+      "mean_true_pIC50": 8.3306,
+      "risk_ratio": 1.0
+    },
+    "top_10": {
+      "hit_rate": 1.0,
+      "mean_true_pIC50": 8.2303,
+      "risk_ratio": 1.0
+    },
+    "top_20": {
+      "hit_rate": 0.9,
+      "mean_true_pIC50": 7.6705,
+      "risk_ratio": 1.0
+    }
+  },
+  "decision_order": {
+    "top_5": {
+      "hit_rate": 1.0,
+      "mean_true_pIC50": 8.2517,
+      "risk_ratio": 1.0
+    },
+    "top_10": {
+      "hit_rate": 0.9,
+      "mean_true_pIC50": 7.9546,
+      "risk_ratio": 1.0
+    },
+    "top_20": {
+      "hit_rate": 0.85,
+      "mean_true_pIC50": 7.6392,
+      "risk_ratio": 1.0
+    }
+  },
+  "overall_risk_ratio": 0.98,
+  "triage_buckets": {
+    "priority": {
+      "count": 11,
+      "share": 0.11,
+      "hit_rate": 0.9091,
+      "mean_true_pIC50": 8.0637,
+      "risk_ratio": 1.0
+    },
+    "watch": {
+      "count": 18,
+      "share": 0.18,
+      "hit_rate": 0.8333,
+      "mean_true_pIC50": 7.3748,
+      "risk_ratio": 1.0
+    },
+    "low": {
+      "count": 71,
+      "share": 0.71,
+      "hit_rate": 0.4225,
+      "mean_true_pIC50": 6.1861,
+      "risk_ratio": 0.9718
+    },
+    "review": {
+      "count": 0,
+      "share": 0.0,
+      "hit_rate": null,
+      "mean_true_pIC50": null,
+      "risk_ratio": null
+    }
+  },
+  "preview_decision_top10": [
+    {
+      "smiles": "CO[C@H](C)C(=O)N[C@@H](Cc1ccc2c(c1)OCO2)[C@H](O)C[NH2+][C@H]1CC2(CCC2)Oc2ncc(CC(C)(C)C)cc21",
+      "true_pIC50": 7.7746906,
+      "is_active": 1,
+      "activity_score": 7.55,
+      "priority_score": 47.22,
+      "triage_key": "priority",
+      "final_risk": "risk",
+      "risk_bucket": "high_risk",
+      "batch_activity_percentile": 91.0,
+      "reason_codes": [
+        "ADMET_HERG_HIGH_RISK"
+      ]
+    },
+    {
+      "smiles": "COCc1cc2cc(n1)OCCCCOc1cccc(c1)CC(C(O)C[NH2+]C1(c3cccc(C(C)C)c3)CC1)NC2=O",
+      "true_pIC50": 8.0457573,
+      "is_active": 1,
+      "activity_score": 8.15,
+      "priority_score": 46.76,
+      "triage_key": "priority",
+      "final_risk": "risk",
+      "risk_bucket": "high_risk",
+      "batch_activity_percentile": 98.0,
+      "reason_codes": [
+        "ADMET_AMES_HIGH_RISK",
+        "ADMET_DUAL_TOX_HIGH_RISK",
+        "ADMET_HERG_HIGH_RISK",
+        "CONFIDENCE_LOW",
+        "MOLECULAR_OBESITY_RISK"
+      ]
+    },
+    {
+      "smiles": "CC(=O)NC(Cc1ccc(F)c(C#N)c1)C(O)C[NH2+]C1CC2(CCC2)Oc2ncc(CC(C)(C)C)cc21",
+      "true_pIC50": 8.6197891,
+      "is_active": 1,
+      "activity_score": 8.27,
+      "priority_score": 46.12,
+      "triage_key": "priority",
+      "final_risk": "risk",
+      "risk_bucket": "high_risk",
+      "batch_activity_percentile": 99.0,
+      "reason_codes": [
+        "ADMET_AMES_HIGH_RISK",
+        "ADMET_DUAL_TOX_HIGH_RISK",
+        "ADMET_HERG_HIGH_RISK",
+        "CONFIDENCE_LOW",
+        "DOMAIN_BORDERLINE",
+        "VALIDATION_REQUIRED_EDGE_WIDE"
+      ]
+    },
+    {
+      "smiles": "CC(=O)N[C@]1(CC(C)C)CCN([C@@H](CCc2ccccc2)C(=O)N[C@@H](Cc2cc(F)cc(F)c2)[C@H](O)[C@H]2Cc3ccccc3C[NH2+]2)C1=O",
+      "true_pIC50": 8.0969095,
+      "is_active": 1,
+      "activity_score": 7.74,
+      "priority_score": 44.45,
+      "triage_key": "priority",
+      "final_risk": "risk",
+      "risk_bucket": "high_risk",
+      "batch_activity_percentile": 94.0,
+      "reason_codes": [
+        "ADMET_HERG_HIGH_RISK",
+        "CONFIDENCE_LOW",
+        "MOLECULAR_OBESITY_RISK",
+        "SYNTHESIS_COMPLEXITY_HIGH"
+      ]
+    },
+    {
+      "smiles": "COCC(=O)NC(Cc1cc(F)cc(-c2nccs2)c1)C(O)C[NH2+]C1CC2(CCC2)Oc2ncc(CC(C)(C)C)cc21",
+      "true_pIC50": 8.7212467,
+      "is_active": 1,
+      "activity_score": 8.35,
+      "priority_score": 43.95,
+      "triage_key": "priority",
+      "final_risk": "risk",
+      "risk_bucket": "high_risk",
+      "batch_activity_percentile": 100.0,
+      "reason_codes": [
+        "ADMET_HERG_HIGH_RISK",
+        "CONFIDENCE_LOW",
+        "DOMAIN_BORDERLINE",
+        "MOLECULAR_OBESITY_RISK",
+        "SYNTHESIS_COMPLEXITY_HIGH",
+        "VALIDATION_REQUIRED_EDGE_WIDE"
+      ]
+    },
+    {
+      "smiles": "Cc1cc2cc(n1)OCCCCOc1cccc(c1)CC(C(O)C[NH2+]C1(c3cccc(C(C)C)c3)CC1)NC2=O",
+      "true_pIC50": 7.7695513,
+      "is_active": 1,
+      "activity_score": 7.86,
+      "priority_score": 40.5,
+      "triage_key": "priority",
+      "final_risk": "risk",
+      "risk_bucket": "high_risk",
+      "batch_activity_percentile": 95.0,
+      "reason_codes": [
+        "ADMET_AMES_HIGH_RISK",
+        "ADMET_DUAL_TOX_HIGH_RISK",
+        "ADMET_HERG_HIGH_RISK",
+        "CONFIDENCE_LOW"
+      ]
+    },
+    {
+      "smiles": "CCOCC(=O)NC(Cc1cccc(-c2nccs2)c1)C(O)C[NH2+]C1CC2(CCC2)Oc2ncc(CC(C)(C)C)cc21",
+      "true_pIC50": 8.2441254,
+      "is_active": 1,
+      "activity_score": 7.92,
+      "priority_score": 39.54,
+      "triage_key": "priority",
+      "final_risk": "risk",
+      "risk_bucket": "high_risk",
+      "batch_activity_percentile": 96.0,
+      "reason_codes": [
+        "ADMET_HERG_HIGH_RISK",
+        "CONFIDENCE_LOW",
+        "DOMAIN_BORDERLINE",
+        "MOLECULAR_OBESITY_RISK",
+        "VALIDATION_REQUIRED_EDGE_WIDE"
+      ]
+    },
+    {
+      "smiles": "COCC(=O)NC(Cc1cc(-c2nccs2)ccc1F)C(O)C[NH2+]C1CC2(CCC2)Oc2ncc(CC(C)(C)C)cc21",
+      "true_pIC50": 8.0222759,
+      "is_active": 1,
+      "activity_score": 7.94,
+      "priority_score": 39.41,
+      "triage_key": "priority",
+      "final_risk": "risk",
+      "risk_bucket": "high_risk",
+      "batch_activity_percentile": 97.0,
+      "reason_codes": [
+        "ADMET_HERG_HIGH_RISK",
+        "CONFIDENCE_LOW",
+        "DOMAIN_BORDERLINE",
+        "MOLECULAR_OBESITY_RISK",
+        "SYNTHESIS_COMPLEXITY_HIGH",
+        "VALIDATION_REQUIRED_EDGE_WIDE"
+      ]
+    },
+    {
+      "smiles": "CC(=O)NC(Cc1ccc(OC(F)(F)F)cc1)C(O)C[NH2+]C1CC2(CCC2)Oc2ncc(CC(C)(C)C)cc21",
+      "true_pIC50": 7.8538718,
+      "is_active": 1,
+      "activity_score": 7.74,
+      "priority_score": 38.21,
+      "triage_key": "priority",
+      "final_risk": "risk",
+      "risk_bucket": "high_risk",
+      "batch_activity_percentile": 94.0,
+      "reason_codes": [
+        "ADMET_AMES_HIGH_RISK",
+        "ADMET_DUAL_TOX_HIGH_RISK",
+        "ADMET_HERG_HIGH_RISK",
+        "CONFIDENCE_LOW",
+        "DOMAIN_BORDERLINE",
+        "VALIDATION_REQUIRED_EDGE_WIDE"
+      ]
+    },
+    {
+      "smiles": "CC(C)c1cccc(C[NH2+]C[C@@H](O)[C@@H]2COC/C=C/C[C@@H](c3ccccc3)NC(=O)c3cc(cc(N(C)S(C)(=O)=O)c3)C(=O)N2)c1",
+      "true_pIC50": 6.3979402,
+      "is_active": 0,
+      "activity_score": 7.48,
+      "priority_score": 37.12,
+      "triage_key": "priority",
+      "final_risk": "risk",
+      "risk_bucket": "high_risk",
+      "batch_activity_percentile": 90.0,
+      "reason_codes": [
+        "ADMET_HERG_HIGH_RISK",
+        "CONFIDENCE_LOW",
+        "SYNTHESIS_COMPLEXITY_HIGH"
+      ]
+    }
+  ]
+}

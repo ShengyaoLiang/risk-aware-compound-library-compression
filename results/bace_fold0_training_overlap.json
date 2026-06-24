@@ -1,0 +1,19 @@
+{
+  "query_path": "training/so_active_v3/runs/so_active_v3/fold0/artifacts/bace_new_model_pred.csv",
+  "query_sha256": "a39da027b956fcb937b05399868755f7a9053022c890d08dfb76cd8398a2430d",
+  "dataset_path": "training/so_active_v3/data/activity_v3.parquet",
+  "dataset_sha256": "ca696ba591bf6b8cc298e2b3ce24fd81ba6e52eb258a7783ce6f9dadec1ae1ba",
+  "held_out_fold": 0,
+  "query_rows": 1513,
+  "query_unique_canonical": 1513,
+  "query_unique_scaffolds": 671,
+  "training_rows_scanned": 875979,
+  "canonical_matches": 321,
+  "canonical_overlap_rate": 0.21216126900198282,
+  "scaffold_matches": 232,
+  "scaffold_overlap_rate": 0.34575260804769004,
+  "gate_status": "failed",
+  "gate_reasons": [
+    "321 standardized structure matches detected"
+  ]
+}

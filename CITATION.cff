@@ -1,0 +1,24 @@
+cff-version: 1.2.0
+message: "If you use this reproducibility package, please cite the associated preprint."
+title: "Budget-Constrained Compound Library Prioritization - Reproducibility Package"
+type: software
+authors:
+  - family-names: Liang
+    given-names: Shengyao
+    email: pikeshuaiwe@gmail.com
+version: 0.1.0
+date-released: 2026-06-24
+license: MIT
+keywords:
+  - cheminformatics
+  - compound library compression
+  - conformal prediction
+  - virtual screening
+  - risk-aware ranking
+preferred-citation:
+  type: article
+  title: "Budget-Constrained Compound Library Prioritization with Risk Awareness and Uncertainty Quantification"
+  authors:
+    - family-names: Liang
+      given-names: Shengyao
+  year: 2026

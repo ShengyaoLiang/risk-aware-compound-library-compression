@@ -1,0 +1,216 @@
+{
+  "schema_version": "1.0",
+  "payload_file_count": 50,
+  "manifest_included": true,
+  "files": [
+    {
+      "path": "README.md",
+      "bytes": 4583
+    },
+    {
+      "path": "LICENSE",
+      "bytes": 1071
+    },
+    {
+      "path": "CITATION.cff",
+      "bytes": 715
+    },
+    {
+      "path": "REPOSITORY_PROFILE.md",
+      "bytes": 789
+    },
+    {
+      "path": "requirements.txt",
+      "bytes": 109
+    },
+    {
+      "path": "pyproject.toml",
+      "bytes": 491
+    },
+    {
+      "path": "manuscript/main.tex",
+      "bytes": 37757
+    },
+    {
+      "path": "manuscript/references.bib",
+      "bytes": 3907
+    },
+    {
+      "path": "manuscript/generated/results_tables.tex",
+      "bytes": 9814
+    },
+    {
+      "path": "manuscript/figures/workflow.pdf",
+      "bytes": 3324
+    },
+    {
+      "path": "manuscript/figures/top1_enrichment.pdf",
+      "bytes": 2375
+    },
+    {
+      "path": "manuscript/figures/virtual_batch_trend.pdf",
+      "bytes": 3454
+    },
+    {
+      "path": "results/bace_fold0_training_overlap.json",
+      "bytes": 761
+    },
+    {
+      "path": "results/bace_fold0_training_overlap.md",
+      "bytes": 708
+    },
+    {
+      "path": "results/bace_overlap_controlled_eval.json",
+      "bytes": 7906
+    },
+    {
+      "path": "results/bace_overlap_controlled_eval.md",
+      "bytes": 812
+    },
+    {
+      "path": "results/bace_scaffold_decision_replay.json",
+      "bytes": 7134
+    },
+    {
+      "path": "results/bace_scaffold_decision_replay.md",
+      "bytes": 760
+    },
+    {
+      "path": "results/bace_scaffold_disjoint.csv",
+      "bytes": 142416
+    },
+    {
+      "path": "results/bace_structure_disjoint.csv",
+      "bytes": 172591
+    },
+    {
+      "path": "results/egfr_overlap_controlled_eval.json",
+      "bytes": 6728
+    },
+    {
+      "path": "results/egfr_overlap_controlled_eval.md",
+      "bytes": 950
+    },
+    {
+      "path": "results/manuscript_source_metrics.json",
+      "bytes": 7845
+    },
+    {
+      "path": "results/statistical_results.json",
+      "bytes": 22633
+    },
+    {
+      "path": "results/statistical_results.md",
+      "bytes": 1979
+    },
+    {
+      "path": "results/operational_validation.json",
+      "bytes": 6608
+    },
+    {
+      "path": "results/operational_validation.md",
+      "bytes": 1860
+    },
+    {
+      "path": "results/multifold_training_summary.json",
+      "bytes": 2755
+    },
+    {
+      "path": "results/multifold_training_summary.md",
+      "bytes": 593
+    },
+    {
+      "path": "results/evidence_matrix.json",
+      "bytes": 7702
+    },
+    {
+      "path": "results/evidence_matrix.md",
+      "bytes": 4471
+    },
+    {
+      "path": "scripts/build_evidence_matrix.py",
+      "bytes": 13649
+    },
+    {
+      "path": "scripts/build_manuscript_figures.py",
+      "bytes": 11787
+    },
+    {
+      "path": "scripts/build_manuscript_source_snapshot.py",
+      "bytes": 1736
+    },
+    {
+      "path": "scripts/build_manuscript_tables.py",
+      "bytes": 20647
+    },
+    {
+      "path": "scripts/build_multifold_training_summary.py",
+      "bytes": 6076
+    },
+    {
+      "path": "scripts/build_operational_validation.py",
+      "bytes": 12282
+    },
+    {
+      "path": "scripts/build_statistical_results.py",
+      "bytes": 8078
+    },
+    {
+      "path": "scripts/evaluate_overlap_controlled_bace.py",
+      "bytes": 6946
+    },
+    {
+      "path": "scripts/evaluate_overlap_controlled_egfr.py",
+      "bytes": 10821
+    },
+    {
+      "path": "scripts/run_overlap_audit.py",
+      "bytes": 2216
+    },
+    {
+      "path": "src/stells_paper/__init__.py",
+      "bytes": 216
+    },
+    {
+      "path": "src/stells_paper/metrics.py",
+      "bytes": 6598
+    },
+    {
+      "path": "src/stells_paper/overlap_audit.py",
+      "bytes": 10907
+    },
+    {
+      "path": "src/stells_paper/parquet_overlap_audit.py",
+      "bytes": 6280
+    },
+    {
+      "path": "src/stells_paper/statistical_analysis.py",
+      "bytes": 7280
+    },
+    {
+      "path": "tests/test_metrics.py",
+      "bytes": 2015
+    },
+    {
+      "path": "tests/test_overlap_audit.py",
+      "bytes": 2171
+    },
+    {
+      "path": "tests/test_statistical_analysis.py",
+      "bytes": 1600
+    },
+    {
+      "path": "examples/bace_scaffold_disjoint_sample.csv",
+      "bytes": 4436
+    }
+  ],
+  "excluded": [
+    "runtime account data",
+    "credentials and secrets",
+    "private uploads",
+    "hidden-label input files",
+    "business correspondence",
+    "complete ChEMBL-derived training assets",
+    "full train/validation ID lists"
+  ]
+}

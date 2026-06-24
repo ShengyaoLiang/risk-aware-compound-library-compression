@@ -1,0 +1,224 @@
+{
+  "schema_version": "1.0",
+  "source": "results/bace_scaffold_disjoint.csv",
+  "ab_control": {
+    "dataset": "BACE scaffold-disjoint",
+    "rows": 962,
+    "results": [
+      {
+        "strategy": "system_activity_order",
+        "top_n": 10,
+        "n": 10,
+        "hit_rate": 1.0,
+        "mean_pIC50": 8.3516,
+        "mean_pred_pIC50": 8.3632,
+        "unique_scaffold_rate": 1.0
+      },
+      {
+        "strategy": "random",
+        "top_n": 10,
+        "seeds": [
+          7,
+          42,
+          2026,
+          3407,
+          10007
+        ],
+        "hit_rate_mean": 0.44,
+        "hit_rate_sd": 0.1342,
+        "mean_pIC50_mean": 6.6667,
+        "mean_pIC50_sd": 0.3905,
+        "unique_scaffold_rate_mean": 0.94
+      },
+      {
+        "strategy": "scaffold_diversity",
+        "top_n": 10,
+        "seeds": [
+          7,
+          42,
+          2026,
+          3407,
+          10007
+        ],
+        "hit_rate_mean": 0.42,
+        "hit_rate_sd": 0.1304,
+        "mean_pIC50_mean": 6.2401,
+        "mean_pIC50_sd": 0.262,
+        "unique_scaffold_rate_mean": 1.0
+      },
+      {
+        "strategy": "system_activity_order",
+        "top_n": 50,
+        "n": 50,
+        "hit_rate": 1.0,
+        "mean_pIC50": 8.2026,
+        "mean_pred_pIC50": 7.9852,
+        "unique_scaffold_rate": 0.56
+      },
+      {
+        "strategy": "random",
+        "top_n": 50,
+        "seeds": [
+          7,
+          42,
+          2026,
+          3407,
+          10007
+        ],
+        "hit_rate_mean": 0.524,
+        "hit_rate_sd": 0.0654,
+        "mean_pIC50_mean": 6.8378,
+        "mean_pIC50_sd": 0.1919,
+        "unique_scaffold_rate_mean": 0.816
+      },
+      {
+        "strategy": "scaffold_diversity",
+        "top_n": 50,
+        "seeds": [
+          7,
+          42,
+          2026,
+          3407,
+          10007
+        ],
+        "hit_rate_mean": 0.44,
+        "hit_rate_sd": 0.0678,
+        "mean_pIC50_mean": 6.4208,
+        "mean_pIC50_sd": 0.1913,
+        "unique_scaffold_rate_mean": 1.0
+      },
+      {
+        "strategy": "system_activity_order",
+        "top_n": 100,
+        "n": 100,
+        "hit_rate": 0.89,
+        "mean_pIC50": 7.8911,
+        "mean_pred_pIC50": 7.8165,
+        "unique_scaffold_rate": 0.51
+      },
+      {
+        "strategy": "random",
+        "top_n": 100,
+        "seeds": [
+          7,
+          42,
+          2026,
+          3407,
+          10007
+        ],
+        "hit_rate_mean": 0.474,
+        "hit_rate_sd": 0.0541,
+        "mean_pIC50_mean": 6.6163,
+        "mean_pIC50_sd": 0.1467,
+        "unique_scaffold_rate_mean": 0.752
+      },
+      {
+        "strategy": "scaffold_diversity",
+        "top_n": 100,
+        "seeds": [
+          7,
+          42,
+          2026,
+          3407,
+          10007
+        ],
+        "hit_rate_mean": 0.444,
+        "hit_rate_sd": 0.0483,
+        "mean_pIC50_mean": 6.4902,
+        "mean_pIC50_sd": 0.1531,
+        "unique_scaffold_rate_mean": 1.0
+      }
+    ]
+  },
+  "error_cases": [
+    {
+      "case_id": "BACE_SD_052",
+      "rank": 52,
+      "smiles_hash": "3ff98c18ac8e",
+      "scaffold_hash": "617d3e1e4294",
+      "pIC50_true": 6.8239,
+      "pred_pIC50": 7.7409,
+      "scaffold_frequency_in_subset": 3,
+      "interpretation": "High predicted score with an inactive label in the strict scaffold-disjoint subset. The case is reported as a scope boundary for retrospective ranking and as a candidate for domain/risk review, not as evidence of a failed system design."
+    },
+    {
+      "case_id": "BACE_SD_057",
+      "rank": 57,
+      "smiles_hash": "2bd8abbb0ee8",
+      "scaffold_hash": "f451e6fac3e9",
+      "pIC50_true": 5.4401,
+      "pred_pIC50": 7.7257,
+      "scaffold_frequency_in_subset": 1,
+      "interpretation": "High predicted score with an inactive label in the strict scaffold-disjoint subset. The case is reported as a scope boundary for retrospective ranking and as a candidate for domain/risk review, not as evidence of a failed system design."
+    },
+    {
+      "case_id": "BACE_SD_060",
+      "rank": 60,
+      "smiles_hash": "2d829fdfdd18",
+      "scaffold_hash": "86e5173f51a0",
+      "pIC50_true": 6.7595,
+      "pred_pIC50": 7.7065,
+      "scaffold_frequency_in_subset": 41,
+      "interpretation": "High predicted score with an inactive label in the strict scaffold-disjoint subset. The case is reported as a scope boundary for retrospective ranking and as a candidate for domain/risk review, not as evidence of a failed system design."
+    }
+  ],
+  "strategy_summary": {
+    "dataset": "BACE scaffold-disjoint",
+    "results": [
+      {
+        "left": "activity_order",
+        "right": "scaffold_diversity",
+        "top10_overlap": 0,
+        "top10_jaccard": 0.0
+      },
+      {
+        "left": "activity_order",
+        "right": "random_seed2026",
+        "top10_overlap": 0,
+        "top10_jaccard": 0.0
+      },
+      {
+        "left": "random_seed2026",
+        "right": "scaffold_diversity",
+        "top10_overlap": 0,
+        "top10_jaccard": 0.0
+      }
+    ]
+  },
+  "cost_case": {
+    "example_library_size": 10000,
+    "compression_fraction": 0.1,
+    "screened_after_compression": 1000,
+    "formula": "first_round_tests = library_size * compression_fraction; avoided_tests = library_size - first_round_tests",
+    "bace_scaffold_disjoint_reference": {
+      "rows": 962,
+      "active_total": 475,
+      "top_10_percent_rows": 96,
+      "active_captured_at_top_10_percent": 85,
+      "recall_at_top_10_percent": 0.1789
+    },
+    "boundary": "The calculation is an assay-budget framing example. It should be calibrated with external project labels before being used for a project-specific cost or hit-rate claim."
+  },
+  "decision_matrix": [
+    {
+      "activity": "high",
+      "interval_or_domain": "narrow_interval_or_in_domain",
+      "recommended_action": "advance_for_first_review"
+    },
+    {
+      "activity": "high",
+      "interval_or_domain": "wide_interval_or_out_of_domain",
+      "recommended_action": "advance_only_with_risk_review"
+    },
+    {
+      "activity": "moderate_or_low",
+      "interval_or_domain": "narrow_interval_or_in_domain",
+      "recommended_action": "reserve_or_use_as_diversity_control"
+    },
+    {
+      "activity": "moderate_or_low",
+      "interval_or_domain": "wide_interval_or_out_of_domain",
+      "recommended_action": "defer_unless_project_context_supports_it"
+    }
+  ]
+}

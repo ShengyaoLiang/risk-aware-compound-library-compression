@@ -1,0 +1,210 @@
+{
+  "schema_version": "1.0",
+  "submission_readiness": "ready_after_author_confirmation_and_final_review",
+  "evidence": [
+    {
+      "id": "chembl36_internal_val",
+      "role": "internal_validation",
+      "status": "available",
+      "artifact": "training/so_active_v3/runs/so_active_v3/fold0/artifacts/eval_fold0.json",
+      "limitations": [
+        "single trained fold currently reported",
+        "bootstrap intervals exclude model-retraining variability"
+      ]
+    },
+    {
+      "id": "chembl36_future",
+      "role": "temporal_holdout",
+      "status": "available",
+      "artifact": "training/so_active_v3/runs/so_active_v3/fold0/artifacts/eval_fold0.json",
+      "limitations": [
+        "single trained fold currently reported",
+        "bootstrap intervals exclude model-retraining variability"
+      ]
+    },
+    {
+      "id": "multifold_training_variability",
+      "role": "training_variability",
+      "status": "insufficient_completed_folds",
+      "artifact": "results/multifold_training_summary.json",
+      "rows": 1,
+      "limitations": [
+        "only fold 0 is complete at this snapshot",
+        "fold 1 and fold 2 should be completed before making a multi-fold claim"
+      ]
+    },
+    {
+      "id": "bace1513_full",
+      "role": "external_source_historical_result",
+      "status": "overlap_detected",
+      "standardized_structure_overlap": 0.21216126900198282,
+      "limitations": [
+        "not valid as strict independent evidence without overlap removal",
+        "full-set metrics retained for provenance only"
+      ]
+    },
+    {
+      "id": "bace1513_structure_disjoint",
+      "role": "external_structure_disjoint",
+      "status": "available",
+      "rows": 1192,
+      "limitations": [
+        "scaffold overlap remains",
+        "bootstrap intervals exclude model-retraining variability"
+      ]
+    },
+    {
+      "id": "bace1513_scaffold_disjoint",
+      "role": "external_scaffold_disjoint_sensitivity",
+      "status": "available",
+      "rows": 962,
+      "limitations": [
+        "bootstrap intervals exclude model-retraining variability"
+      ]
+    },
+    {
+      "id": "egfr_chembl203_full_replay",
+      "role": "workflow_demonstration",
+      "status": "overlap_detected",
+      "standardized_structure_overlap": 0.34,
+      "limitations": [
+        "same ChEMBL 36 source family as the activity training data",
+        "full-set result retained for workflow provenance only",
+        "excluded from independent external-generalization claims"
+      ]
+    },
+    {
+      "id": "egfr_chembl203_structure_disjoint",
+      "role": "target_specific_workflow_sensitivity",
+      "status": "available_with_limitations",
+      "rows": 330,
+      "limitations": [
+        "scaffold overlap remains",
+        "same-source target-specific replay, not independent external validation",
+        "bootstrap intervals exclude model-retraining variability"
+      ]
+    },
+    {
+      "id": "egfr_chembl203_scaffold_disjoint",
+      "role": "target_specific_workflow_sensitivity",
+      "status": "available_with_limitations",
+      "rows": 223,
+      "limitations": [
+        "same-source target-specific replay, not independent external validation",
+        "bootstrap intervals exclude model-retraining variability"
+      ]
+    },
+    {
+      "id": "batch_ranking_seed2026",
+      "role": "budget_constrained_ranking",
+      "status": "available",
+      "artifact": "training/so_active_v3/runs/so_active_v3/fold0/artifacts/batch_ranking_eval_seed2026.json",
+      "limitations": [
+        "legacy full-set BACE batch rows are not used for strict external claims"
+      ]
+    },
+    {
+      "id": "multiseed_virtual_batches",
+      "role": "budget_constrained_ranking_sensitivity",
+      "status": "available",
+      "artifact": "results/statistical_results.json",
+      "limitations": [
+        "seed variability reflects library shuffling only, not model retraining"
+      ]
+    },
+    {
+      "id": "paired_bootstrap_intervals",
+      "role": "fixed_prediction_uncertainty",
+      "status": "available",
+      "artifact": "results/statistical_results.json",
+      "limitations": [
+        "intervals are over frozen prediction rows and exclude retraining variability"
+      ]
+    },
+    {
+      "id": "baseline_sanity_checks",
+      "role": "model_context",
+      "status": "available_with_limitations",
+      "artifact": "training/so_active_v3/runs/so_active_v3/fold0/artifacts",
+      "limitations": [
+        "random forest and Chemprop baselines use sampled ChEMBL 36 splits",
+        "not full Future all-row same-protocol benchmarks",
+        "not a final unified full-scale benchmark suite"
+      ]
+    },
+    {
+      "id": "decision_layer_replay",
+      "role": "risk_aware_ranking",
+      "status": "available_with_limitations",
+      "artifact": "results/bace_scaffold_decision_replay.json",
+      "limitations": [
+        "single replay seed",
+        "not uniformly superior to activity-only ranking",
+        "strict BACE replay uses one 100-molecule virtual batch"
+      ]
+    },
+    {
+      "id": "operational_ab_controls",
+      "role": "budgeted_selection_controls",
+      "status": "available_with_limitations",
+      "artifact": "results/operational_validation.json",
+      "rows": 962,
+      "limitations": [
+        "retrospective simulation on frozen BACE predictions",
+        "random and scaffold-diversity controls use five selection seeds",
+        "Top-10 overlap is reported as a strategy-difference display",
+        "does not establish project-specific wet-lab gains"
+      ]
+    },
+    {
+      "id": "released_package_scope",
+      "role": "public_reproducibility_boundary",
+      "status": "available_with_scope_limits",
+      "artifact": "paper/build/stells_paper_github_release.zip",
+      "limitations": [
+        "complete ChEMBL-derived training assets are not published",
+        "full train/validation ID lists are not published",
+        "released scripts reproduce manuscript tables from frozen non-sensitive artifacts"
+      ]
+    },
+    {
+      "id": "failure_case_analysis",
+      "role": "scope_boundary_analysis",
+      "status": "available",
+      "artifact": "results/operational_validation.json",
+      "rows": 3,
+      "limitations": [
+        "small descriptive sample of high-ranked inactive molecules",
+        "not a complete mechanistic error taxonomy"
+      ]
+    },
+    {
+      "id": "assay_budget_accounting",
+      "role": "illustrative_cost_framing",
+      "status": "available_with_limitations",
+      "artifact": "results/operational_validation.json",
+      "limitations": [
+        "illustrative accounting only",
+        "requires external calibration before project-specific savings claims"
+      ]
+    },
+    {
+      "id": "prospective_wet_lab",
+      "role": "prospective_validation",
+      "status": "missing",
+      "limitations": [
+        "required before claiming project-specific hit-rate or cost gains",
+        "reported as a limitation, not required for an arXiv methods preprint"
+      ]
+    }
+  ],
+  "future_strengthening": [
+    "run all baselines at full scale under identical splits and preprocessing",
+    "complete fold-1 and fold-2 full training to report 2-3 fold variability",
+    "add externally blinded historical replay or prospective wet-lab validation"
+  ],
+  "submission_blockers": [
+    "confirm final author metadata, license, and arXiv category in the arXiv web form",
+    "complete final visual review and obtain an independent domain review"
+  ]
+}

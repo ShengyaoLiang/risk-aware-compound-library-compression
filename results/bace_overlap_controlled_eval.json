@@ -1,0 +1,261 @@
+{
+  "inputs": {
+    "predictions_path": "training/so_active_v3/runs/so_active_v3/fold0/artifacts/bace_new_model_pred.csv",
+    "predictions_sha256": "a39da027b956fcb937b05399868755f7a9053022c890d08dfb76cd8398a2430d",
+    "training_dataset_path": "training/so_active_v3/data/activity_v3.parquet",
+    "training_dataset_sha256": "ca696ba591bf6b8cc298e2b3ce24fd81ba6e52eb258a7783ce6f9dadec1ae1ba"
+  },
+  "original_rows": 1513,
+  "training_rows_scanned": 875979,
+  "held_out_fold": 0,
+  "structure_matches": 321,
+  "scaffold_matches": 232,
+  "subsets": {
+    "full": {
+      "rows": 1513,
+      "positives": 691,
+      "prevalence": 0.456708526107072,
+      "roc_auc": 0.8303720761546615,
+      "regression": {
+        "total": 1513,
+        "mae": 0.7027561372615756,
+        "rmse": 0.932953754925831,
+        "r2": 0.516682490675511,
+        "pearson": 0.7240794941822335,
+        "spearman": 0.6957685255759225
+      },
+      "ranking": {
+        "top_0.001": {
+          "total": 1513,
+          "positives": 691,
+          "k": 2,
+          "hits": 2,
+          "prevalence": 0.456708526107072,
+          "hit_rate": 1.0,
+          "recall": 0.002894356005788712,
+          "enrichment_factor": 2.1895803183791607,
+          "ndcg": 1.0
+        },
+        "top_0.005": {
+          "total": 1513,
+          "positives": 691,
+          "k": 8,
+          "hits": 8,
+          "prevalence": 0.456708526107072,
+          "hit_rate": 1.0,
+          "recall": 0.011577424023154847,
+          "enrichment_factor": 2.1895803183791607,
+          "ndcg": 1.0
+        },
+        "top_0.01": {
+          "total": 1513,
+          "positives": 691,
+          "k": 16,
+          "hits": 15,
+          "prevalence": 0.456708526107072,
+          "hit_rate": 0.9375,
+          "recall": 0.02170767004341534,
+          "enrichment_factor": 2.0527315484804634,
+          "ndcg": 0.9569849987170953
+        },
+        "top_0.05": {
+          "total": 1513,
+          "positives": 691,
+          "k": 76,
+          "hits": 73,
+          "prevalence": 0.456708526107072,
+          "hit_rate": 0.9605263157894737,
+          "recall": 0.10564399421128799,
+          "enrichment_factor": 2.103149516337878,
+          "ndcg": 0.9628230113990519
+        },
+        "top_0.1": {
+          "total": 1513,
+          "positives": 691,
+          "k": 152,
+          "hits": 137,
+          "prevalence": 0.456708526107072,
+          "hit_rate": 0.9013157894736842,
+          "recall": 0.19826338639652677,
+          "enrichment_factor": 1.973503313275954,
+          "ndcg": 0.9146912237167312
+        },
+        "top_0.2": {
+          "total": 1513,
+          "positives": 691,
+          "k": 303,
+          "hits": 250,
+          "prevalence": 0.456708526107072,
+          "hit_rate": 0.8250825082508251,
+          "recall": 0.361794500723589,
+          "enrichment_factor": 1.806584421104918,
+          "ndcg": 0.8484708699029843
+        }
+      }
+    },
+    "structure_disjoint": {
+      "rows": 1192,
+      "positives": 560,
+      "prevalence": 0.4697986577181208,
+      "roc_auc": 0.8034725361663653,
+      "regression": {
+        "total": 1192,
+        "mae": 0.7784881241511202,
+        "rmse": 1.0051526680961549,
+        "r2": 0.4809478906810325,
+        "pearson": 0.7071799016821525,
+        "spearman": 0.6640926741051809
+      },
+      "ranking": {
+        "top_0.001": {
+          "total": 1192,
+          "positives": 560,
+          "k": 2,
+          "hits": 2,
+          "prevalence": 0.4697986577181208,
+          "hit_rate": 1.0,
+          "recall": 0.0035714285714285713,
+          "enrichment_factor": 2.1285714285714286,
+          "ndcg": 1.0
+        },
+        "top_0.005": {
+          "total": 1192,
+          "positives": 560,
+          "k": 6,
+          "hits": 6,
+          "prevalence": 0.4697986577181208,
+          "hit_rate": 1.0,
+          "recall": 0.010714285714285714,
+          "enrichment_factor": 2.1285714285714286,
+          "ndcg": 1.0
+        },
+        "top_0.01": {
+          "total": 1192,
+          "positives": 560,
+          "k": 12,
+          "hits": 12,
+          "prevalence": 0.4697986577181208,
+          "hit_rate": 1.0,
+          "recall": 0.02142857142857143,
+          "enrichment_factor": 2.1285714285714286,
+          "ndcg": 1.0
+        },
+        "top_0.05": {
+          "total": 1192,
+          "positives": 560,
+          "k": 60,
+          "hits": 58,
+          "prevalence": 0.4697986577181208,
+          "hit_rate": 0.9666666666666667,
+          "recall": 0.10357142857142858,
+          "enrichment_factor": 2.0576190476190477,
+          "ndcg": 0.9728286134556603
+        },
+        "top_0.1": {
+          "total": 1192,
+          "positives": 560,
+          "k": 120,
+          "hits": 107,
+          "prevalence": 0.4697986577181208,
+          "hit_rate": 0.8916666666666667,
+          "recall": 0.19107142857142856,
+          "enrichment_factor": 1.8979761904761907,
+          "ndcg": 0.9127681124583983
+        },
+        "top_0.2": {
+          "total": 1192,
+          "positives": 560,
+          "k": 239,
+          "hits": 196,
+          "prevalence": 0.4697986577181208,
+          "hit_rate": 0.8200836820083682,
+          "recall": 0.35,
+          "enrichment_factor": 1.7456066945606696,
+          "ndcg": 0.8479843731106397
+        }
+      }
+    },
+    "scaffold_disjoint": {
+      "rows": 962,
+      "positives": 475,
+      "prevalence": 0.49376299376299376,
+      "roc_auc": 0.7625591699989193,
+      "regression": {
+        "total": 962,
+        "mae": 0.8210775745626285,
+        "rmse": 1.0369999617705994,
+        "r2": 0.40871774767229563,
+        "pearson": 0.6615682875024524,
+        "spearman": 0.6046725974880959
+      },
+      "ranking": {
+        "top_0.001": {
+          "total": 962,
+          "positives": 475,
+          "k": 1,
+          "hits": 1,
+          "prevalence": 0.49376299376299376,
+          "hit_rate": 1.0,
+          "recall": 0.002105263157894737,
+          "enrichment_factor": 2.0252631578947367,
+          "ndcg": 1.0
+        },
+        "top_0.005": {
+          "total": 962,
+          "positives": 475,
+          "k": 5,
+          "hits": 5,
+          "prevalence": 0.49376299376299376,
+          "hit_rate": 1.0,
+          "recall": 0.010526315789473684,
+          "enrichment_factor": 2.0252631578947367,
+          "ndcg": 1.0
+        },
+        "top_0.01": {
+          "total": 962,
+          "positives": 475,
+          "k": 10,
+          "hits": 10,
+          "prevalence": 0.49376299376299376,
+          "hit_rate": 1.0,
+          "recall": 0.021052631578947368,
+          "enrichment_factor": 2.0252631578947367,
+          "ndcg": 1.0
+        },
+        "top_0.05": {
+          "total": 962,
+          "positives": 475,
+          "k": 49,
+          "hits": 49,
+          "prevalence": 0.49376299376299376,
+          "hit_rate": 1.0,
+          "recall": 0.1031578947368421,
+          "enrichment_factor": 2.0252631578947367,
+          "ndcg": 1.0
+        },
+        "top_0.1": {
+          "total": 962,
+          "positives": 475,
+          "k": 97,
+          "hits": 86,
+          "prevalence": 0.49376299376299376,
+          "hit_rate": 0.8865979381443299,
+          "recall": 0.18105263157894738,
+          "enrichment_factor": 1.795594139989148,
+          "ndcg": 0.9121494483840815
+        },
+        "top_0.2": {
+          "total": 962,
+          "positives": 475,
+          "k": 193,
+          "hits": 156,
+          "prevalence": 0.49376299376299376,
+          "hit_rate": 0.8082901554404145,
+          "recall": 0.32842105263157895,
+          "enrichment_factor": 1.6370002727024815,
+          "ndcg": 0.8410203223322096
+        }
+      }
+    }
+  }
+}

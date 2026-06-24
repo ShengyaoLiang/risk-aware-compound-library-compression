@@ -1,0 +1,97 @@
+{
+  "schema_version": "1.0",
+  "status": "insufficient_completed_folds",
+  "completed_folds": [
+    0
+  ],
+  "completed_fold_count": 1,
+  "minimum_for_multifold_claim": 2,
+  "evidence_boundary": "This summary contains non-sensitive fold-level metrics only. It does not publish model weights, molecule IDs, private inputs or account data.",
+  "interpretation": "Fewer than two complete folds are available. The manuscript should continue to report fold-0 as the complete full-scale training artifact and treat multi-fold training as future strengthening until additional folds finish.",
+  "folds": [
+    {
+      "fold": 0,
+      "best_epoch": 36,
+      "last_finished_epoch": 40,
+      "train_rows": 875979,
+      "val_rows": 218995,
+      "val_metrics": {
+        "rmse": 0.846625092010065,
+        "r2": 0.599160373210907,
+        "spearman": 0.7674279814084912,
+        "top0_01_hit": 0.993607305936073,
+        "top0_01_ef": 2.733056571084585,
+        "top0_05_hit": 0.9721461187214612,
+        "top0_05_ef": 2.674024558749578,
+        "top0_1_hit": 0.947945205479452,
+        "top0_1_ef": 2.607456544839889
+      },
+      "future_metrics": {
+        "rmse": 1.1614963485358223,
+        "r2": 0.24731242656707764,
+        "spearman": 0.5171398482174815,
+        "top0_01_hit": 0.9690458849235252,
+        "top0_01_ef": 2.435865795262633,
+        "top0_05_hit": 0.8566433566433567,
+        "top0_05_ef": 2.153322441848248,
+        "top0_1_hit": 0.777818248042251,
+        "top0_1_ef": 1.9551817873791888
+      },
+      "source": "training/so_active_v3/runs/so_active_v3/fold0/artifacts/train_summary.json"
+    }
+  ],
+  "summary": {
+    "val": {
+      "rmse": {
+        "mean": 0.846625092010065,
+        "sd": 0.0
+      },
+      "r2": {
+        "mean": 0.599160373210907,
+        "sd": 0.0
+      },
+      "spearman": {
+        "mean": 0.7674279814084912,
+        "sd": 0.0
+      },
+      "top0_01_ef": {
+        "mean": 2.733056571084585,
+        "sd": 0.0
+      },
+      "top0_05_ef": {
+        "mean": 2.674024558749578,
+        "sd": 0.0
+      },
+      "top0_1_ef": {
+        "mean": 2.607456544839889,
+        "sd": 0.0
+      }
+    },
+    "future": {
+      "rmse": {
+        "mean": 1.1614963485358223,
+        "sd": 0.0
+      },
+      "r2": {
+        "mean": 0.24731242656707764,
+        "sd": 0.0
+      },
+      "spearman": {
+        "mean": 0.5171398482174815,
+        "sd": 0.0
+      },
+      "top0_01_ef": {
+        "mean": 2.435865795262633,
+        "sd": 0.0
+      },
+      "top0_05_ef": {
+        "mean": 2.153322441848248,
+        "sd": 0.0
+      },
+      "top0_1_ef": {
+        "mean": 1.9551817873791888,
+        "sd": 0.0
+      }
+    }
+  }
+}
