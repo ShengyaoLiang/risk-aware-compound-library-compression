@@ -5,7 +5,7 @@
   "files": [
     {
       "path": "README.md",
-      "bytes": 4968
+      "bytes": 6389
     },
     {
       "path": "LICENSE",
@@ -17,7 +17,7 @@
     },
     {
       "path": "REPOSITORY_PROFILE.md",
-      "bytes": 789
+      "bytes": 792
     },
     {
       "path": "requirements.txt",
@@ -29,7 +29,7 @@
     },
     {
       "path": "manuscript/main.tex",
-      "bytes": 37837
+      "bytes": 40727
     },
     {
       "path": "manuscript/references.bib",

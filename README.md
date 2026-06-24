@@ -8,28 +8,37 @@ The original v1.0.0 archive is available at https://doi.org/10.5281/zenodo.20833
 For later releases, use the Zenodo badge or repository release page to access
 the version-specific DOI assigned after archival.
 
-This repository contains the non-sensitive reproducibility materials for the
+This repository is my public, non-sensitive reproducibility record for the
 preprint:
 
 **Budget-Constrained Compound Library Prioritization with Risk Awareness and Uncertainty Quantification**
 
-The package is technical only. It includes scripts, frozen result artifacts,
-subset files, generated manuscript tables and a small public benchmark example.
-It does not include runtime accounts, credentials, private submissions, hidden
-labels, deployment state or business correspondence.
+The manuscript argues for a specific decision layer: before a project spends
+experimental or expert-review budget on a large molecular library, it can first
+compress that library into a smaller, risk-annotated Top-k candidate set. I am
+publishing this repository so that the evidence chain behind that claim can be
+inspected, not merely asserted. It is not a dump of the full platform, a
+deployment package for the Web service, or a promise that every external
+library will show the same enrichment.
 
-The release also does not publish complete ChEMBL-derived training assets or
-full train/validation ID lists. Those files are large and remain outside the
-non-sensitive public package because of size, provenance and internal-asset
-boundaries. The released package instead provides frozen non-sensitive
-summaries, public subset files, generated tables and scripts sufficient to
-reproduce the manuscript tables from the released artifacts.
+What is public here is the non-sensitive record needed to reproduce the
+reported manuscript tables from frozen artifacts: scripts, result summaries,
+public subset files, generated manuscript tables, tests and a small public
+benchmark example. What I have intentionally not included are runtime accounts,
+credentials, private submissions, withheld labels, deployment state, complete
+ChEMBL-derived training assets and full train/validation ID lists. That
+boundary is deliberate: the release should make the evidence auditable without
+exposing private operational data or pretending that a public package is the
+same thing as a deployed screening service.
 
-The recommended public repository name is
-`risk-aware-compound-library-compression`. The public repository URL is
-<https://github.com/ShengyaoLiang/risk-aware-compound-library-compression>.
-Code is released under the MIT license. Public benchmark data and manuscript
-content remain subject to their respective upstream and publication terms.
+The right way to use this repository is to understand the evidence boundary
+and, if the framing is relevant, design an external blind replay or prospective
+A/B pilot on an independent library. The code is released under the MIT
+license. Public benchmark data and manuscript content remain subject to their
+respective upstream and publication terms.
+
+Repository URL:
+<https://github.com/ShengyaoLiang/risk-aware-compound-library-compression>
 
 ## Contents
 
@@ -113,6 +122,25 @@ manuscript/figures/
 - The operational A/B controls are retrospective simulations on frozen public
   artifacts and do not establish project-specific wet-lab hit-rate or cost
   improvement.
+
+## External Validation Use
+
+For an external team, the clean validation path is not to assume that the
+public benchmark enrichment transfers unchanged to its own chemistry. A better
+protocol is:
+
+1. Provide a blinded SMILES-only library while holding back labels or project
+   outcomes.
+2. Rank the library and export Top-k candidate sets without using the labels.
+3. Reveal historical labels or complete prospective testing.
+4. Compare enrichment, hit rate, recall and NDCG against random,
+   diversity-matched and local-selection baselines.
+
+That protocol tests the central claim of the manuscript in the only place it
+ultimately matters: the external team's own chemical and experimental context.
+This is also the collaboration path I prefer, because it lets the platform rank
+first and lets the partner's data decide whether the compression layer adds
+real value.
 
 ## Example Data
 

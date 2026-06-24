@@ -6,8 +6,8 @@ authors:
   - family-names: Liang
     given-names: Shengyao
     email: pikeshuaiwe@gmail.com
-version: 1.0.1
-date-released: 2026-06-24
+version: 1.0.2
+date-released: 2026-06-25
 doi: 10.5281/zenodo.20833014
 url: https://doi.org/10.5281/zenodo.20833014
 license: MIT
