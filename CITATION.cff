@@ -6,10 +6,10 @@ authors:
   - family-names: Liang
     given-names: Shengyao
     email: pikeshuaiwe@gmail.com
-version: 1.0.0
+version: 1.0.1
 date-released: 2026-06-24
-doi: 10.5281/zenodo.20833015
-url: https://doi.org/10.5281/zenodo.20833015
+doi: 10.5281/zenodo.20833014
+url: https://doi.org/10.5281/zenodo.20833014
 license: MIT
 keywords:
   - cheminformatics

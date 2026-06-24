@@ -5,7 +5,7 @@
   "files": [
     {
       "path": "README.md",
-      "bytes": 4583
+      "bytes": 4968
     },
     {
       "path": "LICENSE",
@@ -13,7 +13,7 @@
     },
     {
       "path": "CITATION.cff",
-      "bytes": 715
+      "bytes": 791
     },
     {
       "path": "REPOSITORY_PROFILE.md",
@@ -29,7 +29,7 @@
     },
     {
       "path": "manuscript/main.tex",
-      "bytes": 37757
+      "bytes": 37934
     },
     {
       "path": "manuscript/references.bib",
@@ -45,7 +45,7 @@
     },
     {
       "path": "manuscript/figures/top1_enrichment.pdf",
-      "bytes": 2375
+      "bytes": 2379
     },
     {
       "path": "manuscript/figures/virtual_batch_trend.pdf",
@@ -133,7 +133,7 @@
     },
     {
       "path": "scripts/build_manuscript_figures.py",
-      "bytes": 11787
+      "bytes": 11792
     },
     {
       "path": "scripts/build_manuscript_source_snapshot.py",

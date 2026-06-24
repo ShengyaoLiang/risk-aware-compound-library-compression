@@ -2,7 +2,11 @@
 
 [![DOI](https://zenodo.org/badge/1279105623.svg)](https://doi.org/10.5281/zenodo.20833014)
 
-Archived v1.0.0 release DOI: https://doi.org/10.5281/zenodo.20833015
+Zenodo latest-record DOI: https://doi.org/10.5281/zenodo.20833014
+
+The original v1.0.0 archive is available at https://doi.org/10.5281/zenodo.20833015.
+For later releases, use the Zenodo badge or repository release page to access
+the version-specific DOI assigned after archival.
 
 This repository contains the non-sensitive reproducibility materials for the
 preprint:

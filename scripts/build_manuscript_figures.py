@@ -180,7 +180,7 @@ def results_figure(path: Path) -> None:
             c.line(x_mid - 5, y_high, x_mid + 5, y_high)
         c.setFillColor(colors.HexColor("#172033"))
         c.setFont("Helvetica-Bold", 9)
-        c.drawCentredString(x + bar_w / 2, label_y, f"{value:.2f}x")
+        c.drawCentredString(x + bar_w / 2, label_y, f"{value:.2f}\u00d7")
         c.setFont("Helvetica", 8)
         c.drawCentredString(x + bar_w / 2, y0 - 16, label)
 

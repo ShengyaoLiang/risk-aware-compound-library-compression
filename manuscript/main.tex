@@ -77,13 +77,13 @@ experimental budget.
 Traditional quantitative structure--activity relationship (QSAR) models are
 typically designed for target-specific absolute activity prediction, such as
 regression of pIC50 values for a single kinase. My previous target-specific
-JAK2 modeling work showed that carefully optimized machine-learning models can
-capture measurable structure--activity signal in a curated single-target
-setting \cite{Liang2025JAK2}. In early budget-constrained screening, however,
-the immediate decision need is often not precise absolute activity against a
-known target, but a transparent and target-free prioritization of a structurally
-diverse library. This motivates a shift from single-target activity regression
-to risk-aware ranking and library compression.
+JAK2 study \cite{Liang2025JAK2} showed that optimized machine-learning models
+can capture structure--activity signal in a single-target setting. The present
+pre-screening problem is different: in early
+budget-constrained screening, the immediate decision need is often not precise
+absolute activity against a known target, but a transparent and target-free
+prioritization of a structurally diverse library. This motivates a shift from
+single-target activity regression to risk-aware ranking and library compression.
 
 The problem studied here is not target-specific binding prediction and is not
 a replacement for high-throughput screening, molecular docking, expert CADD,
@@ -204,11 +204,12 @@ immediate advancement questionable. Given a budget $B$, the returned candidate
 set is
 \begin{equation}
 \pi_B(\mathcal{L}) =
-\operatorname{Top}_B\{x_i: q_i,\ b_i,\ r_i\},
+\{x_i \in \mathcal{L}: \operatorname{rank}(x_i) \leq B\},
 \end{equation}
-where $b_i$ denotes the decision bucket and $r_i$ denotes the attached review
-evidence. The objective is not to maximize a hidden scalar alone, but to
-produce a Top-$B$ list whose ordering and demotions can be inspected.
+where $\operatorname{rank}(x_i)$ is induced by the utility $q_i$, the decision
+bucket $b_i$ and the attached review evidence $r_i$. The objective is not to
+maximize a hidden scalar alone, but to produce a Top-$B$ list whose ordering
+and demotions can be inspected.
 
 This formulation separates two questions that are often conflated. The
 activity proxy asks which molecules should appear near the top of a list. The
@@ -577,6 +578,8 @@ distributed through MoleculeNet. The manuscript tables and figures are
 generated from versioned machine-readable artifacts in the accompanying
 reproducibility workspace. The public reproducibility repository is available
 at \url{https://github.com/ShengyaoLiang/risk-aware-compound-library-compression}.
+Archived releases are indexed under the Zenodo latest-record DOI
+\url{https://doi.org/10.5281/zenodo.20833014}.
 The non-sensitive source package includes evaluation scripts, dataset
 manifests, overlap-controlled public subset files, generated tables and result
 artifacts. Runtime account data, external batch submissions, hidden labels,
@@ -656,3 +659,5 @@ The author declares no competing interests.
 
 \bibliography{references}
 \end{document}
+
+
