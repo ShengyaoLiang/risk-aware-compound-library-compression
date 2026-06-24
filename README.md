@@ -1,8 +1,8 @@
 # Budget-Constrained Compound Library Prioritization - Reproducibility Package
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.20833015.svg)](https://doi.org/10.5281/zenodo.20833015)
+[![DOI](https://zenodo.org/badge/1279105623.svg)](https://doi.org/10.5281/zenodo.20833014)
 
-Archived release DOI: https://doi.org/10.5281/zenodo.20833015
+Archived v1.0.0 release DOI: https://doi.org/10.5281/zenodo.20833015
 
 This repository contains the non-sensitive reproducibility materials for the
 preprint:
@@ -115,4 +115,5 @@ manuscript/figures/
 `examples/bace_scaffold_disjoint_sample.csv` is a small sample from the public
 BACE scaffold-disjoint artifact. It is intended for script smoke tests and
 format inspection, not for reporting final metrics.
+
 
