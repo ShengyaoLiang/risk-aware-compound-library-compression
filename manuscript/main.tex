@@ -36,12 +36,11 @@ a testing budget, the goal is to produce a smaller Top-$k$ candidate set that
 is enriched for useful compounds while preserving uncertainty,
 applicability-domain and risk evidence for review.
 \textbf{Methods:} The framework combines an intentionally transparent
-two-dimensional activity proxy, split-conformal uncertainty intervals,
+2D activity proxy, split-conformal uncertainty intervals,
 applicability-domain evidence, ADMET and structural alerts, leakage auditing,
 and auditable Top-$k$ export. I use Morgan fingerprints, RDKit descriptors and
-a multilayer perceptron as a fast, reviewable baseline, because an upstream
-triage layer must be stable, scalable and inspectable before it is
-architecturally ambitious.
+a multilayer perceptron as a fast, reviewable baseline because an upstream
+triage layer should first be stable, scalable and inspectable.
 \textbf{Results:} On ChEMBL 36, the model achieved Spearman 0.7674 and
 EF@1\% 2.7331 on internal validation, and Spearman 0.5171 with EF@1\% 2.4359
 on a temporal holdout. After fold-0 training-overlap control, the
@@ -52,8 +51,8 @@ activity sorting omits. An EGFR/CHEMBL203 label-hidden operational replay
 supported workflow feasibility but is reported as same-source sensitivity
 analysis rather than independent external validation.
 \textbf{Conclusion:} The evidence supports risk-aware library compression as
-an experimental prioritization layer that can sit before existing screening,
-CADD and experimental workflows. Retrospective label-hidden replay is
+an experimental prioritization layer that can be placed before existing
+screening, CADD and experimental workflows. Retrospective label-hidden replay is
 distinguished from truly prospective unknown-activity library use, and
 externally blinded or prospective validation remains necessary before claiming
 project-specific hit-rate or cost improvements.
@@ -69,15 +68,15 @@ synthesis. This motivates a practical question that is upstream of many
 target-specific modeling tasks: can a library be compressed into a smaller,
 risk-annotated candidate set before expensive downstream work begins?
 
-For pharmaceutical teams, CROs and other screening groups, the practical value
-is not a new model label but a transparent pre-screening stage that can reduce the
-first-round search space and expose risk evidence before compounds consume
-experimental budget.
+For screening teams in pharmaceutical, CRO, academic and compound-supplier
+settings, the practical value is not a new model label but a transparent
+pre-screening stage that can reduce the first-round search space and expose
+risk evidence before compounds consume experimental budget.
 
 Traditional quantitative structure--activity relationship (QSAR) models are
 typically designed for target-specific absolute activity prediction, such as
-regression of pIC50 values for a single kinase. My previous target-specific
-JAK2 study \cite{Liang2025JAK2} showed that optimized machine-learning models
+regression of pIC50 values for a single kinase. Previous target-specific
+JAK2 work \cite{Liang2025JAK2} showed that optimized machine-learning models
 can capture structure--activity signal in a single-target setting. The present
 pre-screening problem is different: in early
 budget-constrained screening, the immediate decision need is often not precise
@@ -85,14 +84,13 @@ absolute activity against a known target, but a transparent and target-free
 prioritization of a structurally diverse library. This motivates a shift from
 single-target activity regression to risk-aware ranking and library compression.
 
-The problem studied here is not target-specific binding prediction and is not
-a replacement for high-throughput screening, molecular docking, expert CADD,
-or experimental validation. Instead, I study a target-free pre-screening
-layer that uses molecular structure to rank candidates, flag uncertainty and
-risk, and export Top-$k$ subsets such as the top 10\%, 5\%, 1\%, 0.5\%, or
-0.1\% of a library. The intended output is not a declaration that a molecule
-is experimentally active, but an auditable prioritization list that can reduce
-the number of compounds entering the next decision stage.
+Accordingly, this paper studies a target-free pre-screening layer that uses
+molecular structure to rank candidates, flag uncertainty and risk, and export
+Top-$k$ subsets such as the top 10\%, 5\%, 1\%, 0.5\%, or 0.1\% of a library.
+The layer is meant to precede target-specific binding prediction,
+high-throughput screening, molecular docking, expert CADD and experimental
+validation rather than replace them. Its output is an auditable prioritization
+list, not a declaration that any molecule is experimentally active.
 
 The contributions of this work are:
 \begin{enumerate}
@@ -110,21 +108,20 @@ The contributions of this work are:
 \subsection{System Design Philosophy}
 The system design is deliberately conservative. It prioritizes auditability,
 fast batch inference, leakage-controlled evaluation and reviewable output
-artifacts over architectural novelty. The implementation is treated as a
-testable workflow hypothesis: if a library is ranked and compressed under
-fixed budget constraints, the top portion should be enriched relative to
-random or diversity-only selection while the uncertainty and risk evidence
-remain visible enough for downstream review. All capability claims in this
-paper are therefore tied to explicit datasets, split definitions and known
-limitations.
+artifacts over architectural novelty. The implementation tests a simple
+workflow hypothesis: when a library is ranked and compressed under fixed
+budget constraints, the top portion should be enriched relative to random or
+diversity-only selection while uncertainty and risk evidence remain visible
+for downstream review. All capability claims in this paper are therefore tied
+to explicit datasets, split definitions and known limitations.
 
 \section{Related Work}
 Molecular property prediction has long used fixed structural fingerprints as
 efficient baselines, including extended-connectivity fingerprints
 \cite{ecfp}. Graph neural networks and message-passing models, including
 Chemprop \cite{chemprop}, provide a widely used alternative for supervised
-molecular prediction. In practical screening, however, strong two-dimensional
-baselines remain useful because they are inexpensive, reproducible and easy to
+molecular prediction. In practical screening, however, strong 2D baselines
+remain useful because they are inexpensive, reproducible and easy to
 audit at large scale.
 
 Virtual screening is commonly evaluated with ranking metrics such as
@@ -157,11 +154,11 @@ evidence needed for downstream review. For each molecule, the workflow returns:
   \item a decision tier and exportable audit fields.
 \end{itemize}
 
-The primary scientific claim is a ranking claim: under the evaluated data
+The primary scientific claim is deliberately narrow: under the evaluated data
 settings, the top-ranked portion of a library is enriched for labeled active
-molecules relative to the library baseline. The workflow does not claim that
-top-ranked molecules are guaranteed hits, does not infer a project-specific
-target mechanism, and does not replace experimental confirmation.
+molecules relative to the library baseline. The claim is not that top-ranked
+molecules are guaranteed hits, that a project-specific mechanism has been
+inferred, or that experimental confirmation can be skipped.
 
 \subsection{Evidence Levels and Unknown-Activity Use}
 The workflow separates three evidence settings that are often conflated in
@@ -285,7 +282,7 @@ independent prospective library.
 
 \section{Method}
 \subsection{Activity Proxy}
-The current activity model is a deliberately transparent two-dimensional
+The current activity model is a deliberately transparent 2D
 baseline. I chose this design because upstream triage needs fast batch
 inference, stable behavior and auditability more than architectural novelty.
 Each molecule is represented by a 2058-dimensional vector: a 2048-bit Morgan
@@ -334,10 +331,9 @@ The system accepts SMILES as the minimal input and does not require target
 names, project identifiers or biological context for the ranking pass. The
 workflow performs input quality control, standardization, duplicate handling,
 batch inference, multi-objective ranking, Top-$k$ export and molecule-level
-report generation. Batch results are isolated by account boundary in the
-implementation used for replay. This isolation is an engineering control for
-workflow testing and should be complemented by deployment-specific security
-controls before external operation.
+report generation. The replay implementation preserves batch-level provenance
+so that exported candidate sets can be traced back to the submitted input,
+model artifact and ranking policy.
 
 Operational outputs are intentionally split into compact decision artifacts
 and deeper audit artifacts. CSV/XLSX exports are used for library-level review
@@ -376,11 +372,11 @@ nonparametric bootstrap intervals are computed over frozen prediction rows.
 These intervals quantify uncertainty in the fixed prediction artifacts and do
 not include model retraining variability.
 
-The strict BACE decision replay uses the official backend API in label-hidden
-mode: the system ranks a batch from SMILES only, exports the candidate list,
-and restores labels only after the ranking path is complete. This makes the
-replay useful for testing the operational path without presenting the library as a
-prospective unknown-activity set.
+The strict BACE decision replay uses the reference implementation in
+label-hidden mode: the system ranks a batch from SMILES only, exports the
+candidate list, and restores labels only after the ranking path is complete.
+This makes the replay useful for testing the operational path without
+presenting the library as a prospective unknown-activity set.
 
 \section{Results}
 Figure~\ref{fig:top1} summarizes Top-1\% enrichment across the main evidence
@@ -491,17 +487,18 @@ variability.
 
 \section{Discussion}
 The results support three practical conclusions. First, the current
-two-dimensional model is a strong and auditable baseline for early
+2D model is a strong and auditable baseline for early
 compound-library compression. Second, Top-$k$ ranking metrics are better
 aligned with budget-constrained screening than global regression metrics alone.
 Third, leakage auditing can change the interpretation of otherwise impressive
 external or replay results, and should be part of the reporting protocol.
 
-For external evaluation, the useful shape of the system is operational: it can
-compress a large library into a smaller, reviewable set while preserving the
-reasons a collaborator may want to keep, demote or revisit a molecule. That
-makes the workflow suitable as an upstream layer for existing pharma, CRO and
-supplier screening stacks rather than a replacement for them.
+For external evaluation, the key property is operational rather than only
+metric-based: a large library can be compressed into a smaller, reviewable set
+while preserving the evidence used to keep, demote or revisit individual
+molecules. This makes the workflow suitable as an upstream layer for existing
+screening, CADD, procurement and experimental stacks rather than a replacement
+for them.
 
 Risk-aware ranking also introduces a deliberate trade-off. A pure activity
 ranker may place every high predicted activity molecule at the top, while the
@@ -559,8 +556,9 @@ the uncertainty and audit information needed to decide whether a molecule
 should be advanced, reviewed or deferred.
 
 \section{Limitations}
-This paper reports a strong baseline framework rather than a novel molecular
-representation. Only one full training fold is currently reported, and the
+This paper reports a decision framework built on a strong baseline model
+rather than a novel molecular representation. Only one full training fold is
+currently reported, and the
 bootstrap intervals do not include retraining variability. Multi-fold stability
 assessment is prepared in the reproducibility workflow, but no partial
 multi-fold estimate is reported because incomplete folds would give a false
@@ -582,14 +580,13 @@ Archived releases are indexed under the Zenodo latest-record DOI
 \url{https://doi.org/10.5281/zenodo.20833014}.
 The non-sensitive source package includes evaluation scripts, dataset
 manifests, overlap-controlled public subset files, generated tables and result
-artifacts. Runtime account data, external batch submissions, hidden labels,
-credentials and business correspondence are excluded from the submission
-package. Complete ChEMBL-derived training assets and full train/validation ID
-lists are not part of the public package because of size, provenance and
-internal-asset boundaries; this is an intentional release boundary rather than
-a hidden performance claim. The released artifacts are intended to reproduce
-the manuscript tables from frozen non-sensitive summaries and public subset
-files.
+artifacts. Runtime account data, external batch submissions, withheld labels
+and credentials are excluded from the submission package. Complete
+ChEMBL-derived training assets and full train/validation ID lists are not part
+of the public package because of size, provenance and internal-asset
+boundaries. The released artifacts are intended to reproduce the manuscript
+tables from frozen non-sensitive summaries and public subset files, not to
+serve as a complete service distribution.
 
 \section{Conclusion}
 Risk-aware compound-library compression offers an auditable interface between
@@ -599,9 +596,8 @@ an overlap-controlled external-source BACE subset and a same-source
 label-hidden EGFR operational replay. The strongest next validation step is an
 externally blinded historical replay or a small prospective A/B experiment
 where Top-$k$ candidates are compared against random, diversity-matched, or
-existing project-selection baselines. I therefore recommend that interested
-groups first run a blinded internal-library replay with the released
-non-sensitive artifacts and then, if enrichment is observed, design a
+existing project-selection baselines. A natural validation sequence is first a
+blinded internal-library replay and then, if enrichment is observed, a
 prospective A/B pilot to measure project-specific hit-rate, time and assay
 budget effects. In practice, this makes the framework a reproducible
 pre-screening layer: it reduces the first-round search space, surfaces risk
@@ -655,7 +651,10 @@ results, and wrote the manuscript.
 This work received no external funding.
 
 \section*{Competing Interests}
-The author declares no competing interests.
+The author developed the described framework and may seek external
+collaborations or pilot studies based on this work. No external funding was
+received, and no third-party commercial entity influenced the study design,
+analysis or manuscript.
 
 \bibliography{references}
 \end{document}
