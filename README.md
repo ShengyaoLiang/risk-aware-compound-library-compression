@@ -1,8 +1,11 @@
 # Budget-Constrained Compound Library Prioritization - Reproducibility Package
 
 [![DOI](https://zenodo.org/badge/1279105623.svg)](https://doi.org/10.5281/zenodo.20833014)
+[![arXiv](https://img.shields.io/badge/arXiv-2606.26624-b31b1b.svg)](https://arxiv.org/abs/2606.26624)
 
 Zenodo latest-record DOI: https://doi.org/10.5281/zenodo.20833014
+arXiv preprint: https://arxiv.org/abs/2606.26624
+arXiv DOI: https://doi.org/10.48550/arXiv.2606.26624
 
 The original v1.0.0 archive is available at https://doi.org/10.5281/zenodo.20833015.
 For later releases, use the Zenodo badge or repository release page to access
@@ -12,6 +15,8 @@ This repository is my public, non-sensitive reproducibility record for the
 preprint:
 
 **Budget-Constrained Compound Library Prioritization with Risk Awareness and Uncertainty Quantification**
+
+The preprint is publicly available as arXiv:2606.26624.
 
 The manuscript argues for a specific decision layer: before a project spends
 experimental or expert-review budget on a large molecular library, it can first
