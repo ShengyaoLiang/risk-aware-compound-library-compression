@@ -13,7 +13,7 @@
   - `drug-discovery`
   - `reproducible-research`
 - Code license: MIT
-- Release tag: `v1.0.3`
+- Release tag: `v1.0.4`
 
 Repository URL:
 `https://github.com/ShengyaoLiang/risk-aware-compound-library-compression`
